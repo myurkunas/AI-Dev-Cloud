@@ -47,6 +47,9 @@ def test_empty_question_is_rejected_by_validation():
 
 
 def test_health_endpoint():
+    from app.retrieval import load_documents
+
     res = client.get("/health")
     assert res.status_code == 200
-    assert res.json()["documents"] == 6
+    # documents count should match the loaded corpus, whatever its size.
+    assert res.json()["documents"] == len(load_documents())

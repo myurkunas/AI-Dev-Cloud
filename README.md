@@ -46,8 +46,16 @@ question ──▶ escalation check ──▶ retrieval ──▶ support gate �
                                     corpus.json)   else refuse)
 ```
 
-- `data/corpus.json` — a few representative official Heinz pages, each tagged
-  with its `source_url` (excerpted 2026-07-11).
+- `data/corpus.json` — the retrieval corpus (107 chunks from 32 official
+  Heinz/CMU pages), each tagged with its `source_url`. Generated from Member 2's
+  vetted dataset — see below.
+- `data/sources/` — **Member 2's approved-source pipeline** (the source of truth
+  for the corpus): the approved-source registry, cleaned page text (`raw_pages/`),
+  `sources_manifest.json`, and the reproducible clean → chunk → verify scripts.
+  Regenerate the corpus with `python data/sources/build_corpus.py` (rebuilds
+  `data/corpus.json` from `data/sources/chunks.csv`); `data/sources/README.md`
+  documents the pipeline. Retrieval today is keyword-based; the `scope`/program
+  metadata carried on each chunk enables program-aware retrieval in TM2.
 - `app/retrieval.py` — simple, explainable keyword retriever (no embeddings yet).
 - `app/generation.py` — swappable backends: `stub` (default, no secrets) and
   `claude` (Anthropic API).

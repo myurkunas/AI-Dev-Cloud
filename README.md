@@ -9,6 +9,10 @@ This is the **TM1 minimal working prototype**. It runs end-to-end with no
 secrets (using a stubbed answer), and can generate grounded answers with Claude
 when an API key is provided.
 
+> **Team handoff:** [`docs/prototype-handoff.md`](docs/prototype-handoff.md)
+> explains the prototype for the rest of the team — including whether it uses an
+> LLM, the data/API contracts, and what each member needs to do next.
+
 ## What it does
 
 `POST /ask` takes a question and returns:

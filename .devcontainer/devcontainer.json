@@ -1,0 +1,21 @@
+{
+  "name": "Heinz Admissions Assistant",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  // Install the prototype's dependencies when the container is created,
+  // so a new teammate can clone, open in the container, and run immediately.
+  "postCreateCommand": "pip install -r requirements.txt",
+  // FastAPI dev server (uvicorn) runs on 8000.
+  "forwardPorts": [8000],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+      ],
+      "settings": {
+        "python.testing.pytestEnabled": true,
+        "python.testing.pytestArgs": ["tests"]
+      }
+    }
+  }
+}

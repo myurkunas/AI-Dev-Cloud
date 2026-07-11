@@ -9,9 +9,10 @@ This is the **TM1 minimal working prototype**. It runs end-to-end with no
 secrets (using a stubbed answer), and can generate grounded answers with Claude
 when an API key is provided.
 
-> **Team handoff:** [`docs/prototype-handoff.md`](docs/prototype-handoff.md)
-> explains the prototype for the rest of the team — including whether it uses an
-> LLM, the data/API contracts, and what each member needs to do next.
+> **Docs:** [`docs/prototype-handoff.md`](docs/prototype-handoff.md) explains the
+> prototype for the team (LLM/stub design, data/API contracts, next steps).
+> [`docs/code-provenance-log.md`](docs/code-provenance-log.md) records what was
+> AI-generated vs. human-reviewed.
 
 ## What it does
 
@@ -55,6 +56,12 @@ question ──▶ escalation check ──▶ retrieval ──▶ support gate �
 - `app/cli.py` — command-line interface for quick testing.
 
 ## Clone and run
+
+**Using the devcontainer (recommended):** open the repo in VS Code and choose
+"Reopen in Container". The container (Python 3.12) installs `requirements.txt`
+automatically; then run `uvicorn app.main:app --reload` and `pytest`.
+
+**Or with a local virtual environment:**
 
 ```bash
 # 1. Create and activate a virtual environment

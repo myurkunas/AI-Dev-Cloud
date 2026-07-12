@@ -1,7 +1,6 @@
 # TM1 — Foundation & Architecture
 
 **Heinz Admissions Navigator**
-Prepared by Member 3 (Architecture & Documentation) · 95-731 AI, Cloud, and DevOps
 
 ## 1. Purpose and scope
 

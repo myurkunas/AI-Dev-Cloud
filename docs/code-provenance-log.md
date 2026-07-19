@@ -45,7 +45,7 @@ No portion was written by hand from scratch.
 | `app/cli.py` | Agent-generated | Claude Code (Opus 4.8) | "CLI for quick manual testing" | Member 4 | Reviewed, accepted |
 | `data/corpus.json` | Agent-generated from official sources | Claude Code (Opus 4.8) + web fetch | "Ground a seed corpus in real official Heinz admissions pages" | Member 4 | Reviewed; **facts need a source spot-check** (see caveat) |
 | `tests/` | Agent-generated | Claude Code (Opus 4.8) | "pytest for retrieval ranking, refuse/escalate, validation, health" | Member 4 | Reviewed, ran (8 passing) |
-| `deploy/ec2-user-data.sh`, `deploy/aws-ec2-guide.md` | Agent-generated | Claude Code (Opus 4.8) | "EC2 bootstrap + Learner Lab console deployment guide" | Member 4 | Reviewed; not yet executed in AWS |
+| `deploy/ec2-user-data.sh`, `deploy/aws-ec2-guide.md` | Agent-generated | Claude Code (Opus 4.8) | "EC2 bootstrap + Learner Lab console deployment guide" | Member 4 | Reviewed; executed and tested on EC2 in the Learner Lab (instance torn down when the lab session ended; redeployable via the guide) |
 | `.devcontainer/devcontainer.json` | Agent-generated | Claude Code (Opus 4.8) | "Devcontainer so a teammate can clone and run" | Member 4 | Reviewed, accepted |
 | `README.md`, `docs/prototype-handoff.md`, this log | Agent-generated | Claude Code (Opus 4.8) | "Run instructions, team handoff, provenance log" | Member 4 | Reviewed, accepted |
 

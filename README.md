@@ -122,8 +122,10 @@ claims unsupported by official sources. Such questions are refused or escalated.
 
 ## Status / AWS
 
-TM1 is developed and run **locally** via the devcontainer. Nothing has been
-deployed to or tested in AWS yet. The architecture is designed so the FastAPI
-service can later be deployed into the AWS Academy Learner Lab; a ready-to-run
-EC2 deployment (bootstrap script + console guide) is in
-[`deploy/aws-ec2-guide.md`](deploy/aws-ec2-guide.md) for when a live demo is needed.
+TM1 is developed **locally** via the devcontainer and has been **deployed and
+tested on AWS EC2 in the Academy Learner Lab** (Amazon Linux 2023, uvicorn under
+systemd, bootstrapped by `deploy/ec2-user-data.sh`). The Learner Lab sandbox
+shuts down after a few hours, so no instance is kept running between sessions;
+instead the repo stays in a **redeploy-ready** state — following
+[`deploy/aws-ec2-guide.md`](deploy/aws-ec2-guide.md) brings up a fresh instance
+from scratch in a few minutes whenever a live demo is needed.

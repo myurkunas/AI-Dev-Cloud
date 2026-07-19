@@ -51,7 +51,7 @@ A student's question enters through one of three equivalent interfaces, passes t
 - **Refusal wording.** The fallback string hard-coded in `pipeline.py` does not yet match the written policy's exact wording. A canonical version needs to be agreed on and synced into the code.
 - **Corpus.** The current 6 seed documents unblock the prototype but are not the final vetted source set; a curated inventory of roughly 10–20 pages will replace them.
 - **Escalation trigger list.** The current phrase list (admission chances, visa, immigration, guarantee language, and similar) is encoded in code and should be reviewed against the governance policy.
-- **Deployment.** The EC2 bootstrap script and console guide are ready to run but have not yet been executed, since the Learner Lab environment is ephemeral and deployment timing is a team decision.
+- **Deployment.** The service has been deployed and tested on EC2 in the AWS Academy Learner Lab using the bootstrap script and console guide in `deploy/`. Because Learner Lab sessions shut down after a few hours, no instance is left running; the deployment is intentionally scripted so it can be recreated from scratch in minutes for any demo or grading session.
 
 ## 8. Where this goes next
 
